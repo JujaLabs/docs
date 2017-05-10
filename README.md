@@ -1,10 +1,15 @@
 # JuJa Platform
 
-### Architecture
+## General
 
-![alt text](https://github.com/JujaLabs/docs/blob/master/juja_platform.png "JuJa Platform")
+![JuJa Platform architecture image](https://github.com/JujaLabs/docs/blob/master/architecture/juja_platform.png "JuJa Platform")
 
-### Stack of technologies
+## Architecture
+
+* [Gamification](https://github.com/JujaLabs/docs/tree/master/architecture/gamification)
+* [User](https://github.com/JujaLabs/docs/tree/master/architecture/user)
+
+## Stack of technologies
 
 #### Common
 
@@ -19,7 +24,7 @@
 * Spring MVC
 * Spring Boot Test
 * Spring RestTemplate
-* S[ring MongoTemplate
+* Spring MongoTemplate
 * JUnit
 * Mockito as a mock framework
 
@@ -29,14 +34,13 @@
 * Angular2
 * Bootstrap
 
+## Links to all repositories
 
-### Links to all repositories
-
-#### FrontEnd repositories
+### FrontEnd repositories
 
 * [Gamification UI](https://github.com/JujaLabs/gamification-ui)
 
-#### BackEnd repositories
+### BackEnd repositories
 
 * [Gamification Service](https://github.com/JujaLabs/gamification)
 * [Gamification slack bot](https://github.com/JujaLabs/gamification-slack-bot)
