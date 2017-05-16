@@ -371,7 +371,7 @@
 
 * GMF-F11-URL
 ```
-    url - "/achieve/createteam"
+    url - "/achieve/keepers/createteam"
     method - POST
 ```
 * GMF-F11-REQ
@@ -387,4 +387,27 @@
 * GMF-F11-RSP["..."] - один элемент в массиве(id номер сохраненной комманды)
 * GMF-F11-S1-REQ /create-team @slack1 @slack2 @slack3 slack4
 * GMF-F11-S2-RSP команда с {teamId} создана.
+* GMF-F11-S3-RSP текст ошибки.
+
+### GMF-F12
+***GMF-F12 Я как хранитель хочу иметь возможность расформировывать(удалять) связки. 
+подробней о связках в GMF-10.***
+
+* GMF-F12-D1 Операцию могут выполнять не все пользователи. Только хранители GMF-D6-3.
+* GMF-F11-D2 Хранитель указывает id связки которую необходимо расформировать.
+* GMF-F11-URL
+```
+    url - "/achieve/keepers/deleteteam"
+    method - DELETE
+```
+* GMF-F11-REQ
+```
+    {
+        "from" : "..."
+        "teamId" : "..."
+    }
+```
+* GMF-F11-RSP["..."] - один элемент в массиве(id - номер расформированой комманды)
+* GMF-F11-S1-REQ /delete-team {teamId}
+* GMF-F11-S2-RSP команда с {teamId} расформирована.
 * GMF-F11-S3-RSP текст ошибки.
