@@ -80,5 +80,59 @@ https://api.slack.com/slash-commands
 * SLB-F15-S1-RSP-gamification ["..."] - массив id сохраненных ачивок.
 * SLB-F15-S2-RSP-gamification ["..."] - сообщение об ошибке.
 
-* SLB-F15-S3-RSP-slack "Спасибо, ваша работа в команде учтена".
-* SLB-F15-S4-RSP-slack Текст ошибки.
+* SLB-F16-S3-REQ-slack /team 2
+* SLB-F15-S4-RSP-slack "Спасибо, ваша работа в команде учтена".
+* SLB-F15-S5-RSP-slack Текст ошибки.
+
+### SLB-F16
+
+***SLB-F16 Я как хранитель хочу иметь возможность создавать связки. 
+Связка это команда состоящая из четырех человек, которая за свою работу может получить +6 джуджиков раз в неделю.
+подробней о связках в SLB-F16.***
+
+* SLB-F16-D1 в поле text должно прийти четыре slackName.
+* SLB-F16-D2 slackName необходимо перевести в uuid.
+* SLB-F11-D3 сформировать запрос для геймификации SLB-F16-URL-gamification и SLB-F16-REQ-gamification.
+* SLB-F11-D3 отправить ответ в slack чат SLB-F16-S2-RSP-slack.
+
+
+* SLB-F16-URL-slack
+    ```
+    url - "/commands/createteam"
+    method - POST
+    ```
+* SLB-F16-REQ-slack
+    ```
+    token=...
+    team_id=...
+    team_domain=...
+    channel_id=...
+    channel_name=...
+    user_id=...
+    user_name=...
+    command=/team
+    text={teamId}
+    response_url=...
+    ```
+    
+* SLB-F16-URL-gamification
+    ```
+    url - "/team"
+    method - POST
+    ```
+* SLB-F16-REQ-gamification
+    ```
+     {
+        "from" : "..."
+        "user1" : "..."
+        "user2" : "..."
+        "user3" : "..."
+        "user4" : "..."
+    }
+    ```
+* SLB-F16-S1-RSP-gamification ["..."] - один элемент в массиве(id - номер сформированой комманды)
+* SLB-F16-S1-RSP-gamification ["..."] - сообщение об ошибке.
+
+* SLB-F16-S1-REQ-slack /create-team @slack1 @slack2 @slack3 @slack4
+* SLB-F16-S2-RSP-slack команда с {teamId} создана.
+* SLB-F16-S3-RSP-slack текст ошибки.
