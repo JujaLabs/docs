@@ -230,7 +230,7 @@ https://api.slack.com/slash-commands
 *SLB-F5-D2 сохранить ачивку
 *SLB-F5-D3 передать сообщение пользователю об успешном/неуспешном выполнении команды
 
-*SLB-F5-CMD 
+* SLB-F5-CMD 
 ```
     /team
 ```
@@ -254,14 +254,14 @@ https://api.slack.com/slash-commands
     response_url=...
     ```
     
-*SLB-F5-RSP-OK
+* SLB-F5-RSP-OK
    ```
     {
     text:Спасибо, вы получили джуджики за участие в комманде.
     }
     ```
-*SLB-F5-RSP-ERR
-   ```
+* SLB-F5-RSP-ERR
+    ```
     {
     text:{текст ошибки}.
     }
