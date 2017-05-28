@@ -8,6 +8,7 @@
 
 * [Gamification](https://github.com/JujaLabs/docs/tree/master/architecture/gamification)
 * [User](https://github.com/JujaLabs/docs/tree/master/architecture/user)
+* [SlackBotGamification] (https://github.com/JujaLabs/docs/tree/master/architecture/slackbot)
 
 ## Stack of technologies
 
