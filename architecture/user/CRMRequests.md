@@ -1,4 +1,4 @@
-# Выбрать всех студентов:
+## Выбрать всех студентов:
  
 `GET http://123.123.123.123/x2engine/index.php/api2/Contacts/?c_isStudent=1`
  
@@ -29,7 +29,7 @@
 ]
  ```
  
-# Выбрать студента по UUID:
+## Выбрать студента по UUID:
  
 `GET http://123.123.123.123/x2engine/index.php/api2/Contacts/?c_isStudent=1&c_uuid=123e4567-e89b-12d3-a456-426655440000'`
  
@@ -46,7 +46,7 @@
 ]
  ```
  
-# Выбрать студента по Slack:
+## Выбрать студента по Slack:
  
 `GET http://123.123.123.123/x2engine/index.php/api2/Contacts/?c_isStudent=1&c_slack=@den'`
  
@@ -61,7 +61,7 @@
 }
  ```
  
-# Выборка всех хранителей:
+## Выборка всех хранителей:
  
 `GET http://123.123.123.123/x2engine/index.php/api2/Keepers/?c_isActive=1`
  
