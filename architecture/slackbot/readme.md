@@ -226,9 +226,9 @@ https://api.slack.com/slash-commands
 * [дока по связкам](https://docs.google.com/document/d/190xabylJ7VW00jbxe5CHI_mns9QrGXL_2KHJeJzO6Mo/edit)
 
  Задачи слак бота:
-*SLB-F5-D1 проверить token
-*SLB-F5-D2 сохранить ачивку
-*SLB-F5-D3 передать сообщение пользователю об успешном/неуспешном выполнении команды
+* SLB-F5-D1 проверить token
+* SLB-F5-D2 сохранить ачивку
+* SLB-F5-D3 передать сообщение пользователю об успешном/неуспешном выполнении команды
 
 * SLB-F5-CMD 
 ```
