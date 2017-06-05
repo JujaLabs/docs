@@ -8,6 +8,7 @@
 
 * [Gamification](https://github.com/JujaLabs/docs/tree/master/architecture/gamification)
 * [User](https://github.com/JujaLabs/docs/tree/master/architecture/user)
+* [Team](https://github.com/JujaLabs/docs/tree/master/architecture/team)
 
 ## Stack of technologies
 
