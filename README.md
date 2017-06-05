@@ -2,6 +2,8 @@
 
 ## General
 
+* [Workflow](github.com/JujaLabs/docs/tree/master/other/workflow)
+
 ![JuJa Platform architecture image](https://github.com/JujaLabs/docs/blob/master/architecture/juja_platform.png "JuJa Platform")
 
 ## Architecture
