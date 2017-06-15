@@ -129,11 +129,11 @@ JuJa связка состоит из 4х участников , не важно
     url - "/teams/myteam/{uuid} //uuid пользователя, по которому ищется свяка
     method - GET
 ```
-* TMF-F4-REQ
+* TMF-F5-REQ
 ```
     {}
 ```
-* TMF-F4-RSP
+* TMF-F5-RSP
 ```
         {
         "id": .... ,
