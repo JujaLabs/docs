@@ -15,7 +15,8 @@
 * [Gamification](https://github.com/JujaLabs/docs/tree/master/architecture/gamification)
 * [GamificationSlackBot](https://github.com/JujaLabs/docs/tree/master/architecture/gamification_slackbot)
 * [Keepers](https://github.com/JujaLabs/docs/tree/master/architecture/keepers)
-* [Team](https://github.com/JujaLabs/docs/tree/master/architecture/team)
+* [KeepersSlackBot](https://github.com/JujaLabs/docs/tree/master/architecture/keepers_slackbot)
+* [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams)
 * [Users](https://github.com/JujaLabs/docs/tree/master/architecture/users)
 
 
@@ -36,7 +37,18 @@
 * Spring RestTemplate
 * Spring MongoTemplate
 * JUnit
-* Mockito as a mock framework
+* Mockito
+* MongoDB
+* Fakemongo
+* Lordofthejars
+* Rest-assured
+* Skyscreamer
+* Javacrumbs.json-unit
+* Lombok
+* Gradle
+* Swagger
+* Apache.httpclient
+* Jbot
 
 #### FrontEnd
 
@@ -54,7 +66,9 @@
 
 * [Gamification](https://github.com/JujaLabs/gamification)
 * [Gamification slack bot](https://github.com/JujaLabs/gamification-slack-bot)
-* [Team](https://github.com/JujaLabs/teams)
+* [Teams](https://github.com/JujaLabs/teams)
+* [Teams slack bot](https://github.com/JujaLabs/teams-slack-bot)
 * [Users](https://github.com/JujaLabs/users)
 * [Keepers](https://github.com/JujaLabs/keepers)
+* [Keepers slack bot](https://github.com/JujaLabs/keepers-slack-bot)
 * [Notification](https://github.com/JujaLabs/notification)
