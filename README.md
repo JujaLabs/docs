@@ -17,6 +17,7 @@
 * [Keepers](https://github.com/JujaLabs/docs/tree/master/architecture/keepers)
 * [KeepersSlackBot](https://github.com/JujaLabs/docs/tree/master/architecture/keepers_slackbot)
 * [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams)
+* [TeamsSlackBot](https://github.com/JujaLabs/docs/tree/master/architecture/teams_slackbot)
 * [Users](https://github.com/JujaLabs/docs/tree/master/architecture/users)
 
 
