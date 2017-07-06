@@ -130,6 +130,14 @@ response_url=https://hooks.slack.com/commands/1234/5678
     text: Команда team_id расформирована.
     }
     ```
+
+* SLB-F2-RSP-EMPTY
+    ```
+    {
+    text: Команды с team_id не существует.
+    }
+    ```
+    
     
 * SLB-F2-RSP-ERR
    ```
@@ -138,7 +146,7 @@ response_url=https://hooks.slack.com/commands/1234/5678
     }
     ```
     
-**SLB-F3 Я как пользователь хочу иметь возможность получить список всех связок с id и участниками. **
+**SLB-F3 Я как пользователь хочу иметь возможность получить список всех связок с id и участниками.**
 
 Задачи слак бота:
 * SLB-F3-D1 проверить token
@@ -149,11 +157,11 @@ response_url=https://hooks.slack.com/commands/1234/5678
 
 * SLB-F3-CMD 
 ```
-    /teams-all-active
+    /teams
 ```
 * SLB-F3-URL
 ```
-    url - commands/teams/active
+    url - commands/teams
     method - GET
 ```
 * SLB-F3-REQ
@@ -191,7 +199,7 @@ response_url=https://hooks.slack.com/commands/1234/5678
     }
     ```
     
-**SLB-F4 Я как пользователь хочу иметь возможность получить список всех участников определенной связки. **
+**SLB-F4 Я как пользователь хочу иметь возможность получить список всех участников определенной связки.**
 
 Задачи слак бота:
 * SLB-F4-D1 проверить token
@@ -246,7 +254,7 @@ response_url=https://hooks.slack.com/commands/1234/5678
     }
     ```
     
-**SLB-F5 Я как пользователь хочу иметь возможность получить список всех участников своей активной связки **
+**SLB-F5 Я как пользователь хочу иметь возможность получить список всех участников своей активной связки**
 
 Задачи слак бота:
 * SLB-F5-D1 проверить token
@@ -257,11 +265,11 @@ response_url=https://hooks.slack.com/commands/1234/5678
     
 * SLB-F5-CMD 
 ```
-    /teams-my
+    /myteam
 ```
 * SLB-F5-URL
 ```
-    url - commands/team/my
+    url - commands/myteam
     method - POST
 ```
 * SLB-F5-REQ
