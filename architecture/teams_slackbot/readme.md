@@ -200,4 +200,55 @@ response_url=https://hooks.slack.com/commands/1234/5678
     text:{текст ошибки}.
     }
     ```
+
+ **SLB-F4 Я как пользователь хочу иметь возможность получить список всех участников своей активной связки**
  
+ Задачи слак бота:
+ * SLB-F4-D1 проверить token
+ * SLB-F4-D2 получить данные из сервиса Teams
+ * SLB-F4-D3 Вывести полученные данные пользователю
+ * SLB-F4-D4 @slack_nick_name1...4 - имена четырех пользователя в системе Slack, всегда начинаются с символа '@'
+     
+ * SLB-F4-CMD 
+ ```
+     /myteam
+ ```
+ * SLB-F4-URL
+ ```
+     url - commands/myteam
+     method - POST
+ ```
+ * SLB-F4-REQ
+    ```    
+     token=...
+     team_id=...
+     team_domain=...
+     channel_id=...
+     channel_name=...
+     user_id=...
+     user_name=...
+     command=...
+     text=...
+     response_url=...
+     ```
+ 
+ * SLB-F4-RSP-OK
+    ```
+     {
+     text: Моя команда;
+     @slack_nick_name_1, @slack_nick_name_2, @slack_nick_name_3, @slack_nick_name_4
+     }
+     ```
+ * SLB-F4-RSP-EMPTY
+     ```
+     {
+     text: Вы не состоите ни в какой команде
+     }
+     ```
+     
+ * SLB-F4-RSP-ERR
+    ```
+     {
+     text:{текст ошибки}.
+     }
+     ```    
