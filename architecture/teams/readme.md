@@ -88,12 +88,11 @@ JuJa связка состоит из 4х участников , не важно
         {
             "id": .... ,
             "from": .... ,
-            "uuidOne": .... ,
-            "uuidTwo": .... ,
-            "uuidThree": .... ,
-            "uuidFour": .... ,
-            "startDate": .... ,
-            "dismissDate": ....
+            "members":[
+                .... , .... , .... , .... 
+            ],
+            "activateDate": .... ,
+            "deactivateDate": ....
         },
         {
             ....
@@ -125,12 +124,11 @@ JuJa связка состоит из 4х участников , не важно
         {
             "id": .... ,
             "from": .... ,
-            "uuidOne": .... ,
-            "uuidTwo": .... ,
-            "uuidThree": .... ,
-            "uuidFour": .... ,
-            "startDate": .... ,
-            "dismissDate": ....
+            "members":[
+                .... , .... , .... , .... 
+            ],
+            "activateDate": .... ,
+            "deactivateDate": ....
         }
     ]    
  ```
