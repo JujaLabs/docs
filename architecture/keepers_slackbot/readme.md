@@ -55,7 +55,7 @@ response_url=https://hooks.slack.com/commands/1234/5678
 ```
 * SLB-F1-URL
 ```
-    url - commands/keeper
+    url - commands/keeper/add
     method - POST
 ```
 
@@ -184,62 +184,6 @@ response_url=https://hooks.slack.com/commands/1234/5678
     ```
     
 * SLB-F3-RSP-ERR
-   ```
-    {
-    text:{текст ошибки}.
-    }
-    ```
-    
-**SLB-F4 Я, как Хранитель, хочу получить список всех активных Хранителей с их направлениями, которые есть в системе**
-
-Задачи слак бота:
-* SLB-F4-D1 проверить token
-* SLB-F4-D2 получить данные из сервиса Keepers
-* SLB-F4-D3 Вывести полученные данные пользователю
-* SLB-F4-D4 @slack_nick_name - имя пользователя в системе Slack, всегда начинается с символа '@'
-* SLB-F4-D5 direction - название направления Хранителя. Короткая фраза или слово описывающее направление, которым занимается Хранитель
-    
-* SLB-F4-CMD 
-```
-    /keepers
-```
-* SLB-F4-URL
-```
-    url - commands/active-keepers
-    method - POST
-```
-* SLB-F4-REQ
-   ```    
-    token=...
-    team_id=...
-    team_domain=...
-    channel_id=...
-    channel_name=...
-    user_id=...
-    user_name=...
-    command=...
-    text=...
-    response_url=...
-    ```
-
-* SLB-F4-RSP-OK
-   ```
-    {
-    text:
-     Активные Хранители:
-     @slack_nick_name - {direction}
-     @slack_nick_name - {direction}, {direction}
-     ...
-    }
-    ```
-* SLB-F4-RSP-EMPTY
-    ```
-    {
-    text: Активные Хранители в системе не зарегистрированы
-    }
-    ```
-    
-* SLB-F4-RSP-ERR
    ```
     {
     text:{текст ошибки}.
