@@ -277,3 +277,64 @@ starts with '@' symbol;
     text:{error message}.
      }
      ```    
+     
+**SLB-F5 I like a user want to get all active Teams.**
+
+Slackbot tasks:
+* SLB-F5-D1 Validate token;
+* SLB-F5-D2 Send request to Teams Service to get all active Teams receive response (array of Team entity);
+* SLB-F5-D3 Send response to slack user in case of successful command execution or error;
+* SLB-F5-D5 @slack_name1, @slack_name2, @slack_name3, @slack_name4 - Slack user names, always 
+starts with '@' symbol;
+    
+* SLB-F5-CMD 
+```
+    /teams-all 
+```
+* SLB-F5-URL
+```
+    url - commands/teams/getAll
+    method - POST
+```
+* SLB-F5-REQ
+   ```    
+    token=...
+    team_id=...
+    team_domain=...
+    channel_id=...
+    channel_name=...
+    user_id=...
+    user_name=...
+    command=...
+    text=...
+    response_url=...
+    ```
+
+* SLB-F5-RSP-INS-OK
+   ```
+    {
+    text: Thanks, Get All Teams job started!
+    }
+   ```
+* SLB-F5-RSP-DEL-OK
+   ```
+    {
+    text:Thanks, All teams are:
+     '@slack_name1 @slack_name2 @slack_name3 @slack_name4',
+     '@slack_name5 @slack_name6 @slack_name7 @slack_name8',
+     ...
+     "
+    }
+   ```
+* SLB-F5-RSP-EMPTY
+    ```
+    {
+    text: There is no one team on the course
+    }
+    ```
+* SLB-F5-RSP-ERR
+   ```
+    {
+    text:{error message}.
+    }
+    ```     
