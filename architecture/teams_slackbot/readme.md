@@ -89,7 +89,7 @@ starts with '@' symbol;
 * SLB-F1-RSP-DEL-OK
    ```
     {
-    text: Thanks, new Team for '@slack_name1 @slack_name2 @slack_name3 @slack_name4' activated
+    text: Thanks, new Team for '@slack_name1 @slack_name2 @slack_name3 @slack_name4' activated!
     }
    ```
 * SLB-F1-RSP-ERR
@@ -143,14 +143,14 @@ starts with '@' symbol;
 * SLB-F2-RSP-DEL-OK
    ```
     {
-    text: Thanks, Team '@slack_name1 @slack_name2 @slack_name3 @slack_name4' deactivated"
+    text: Thanks, Team '@slack_name1 @slack_name2 @slack_name3 @slack_name4' deactivated!
     }
    ```
 
 * SLB-F2-RSP-EMPTY
     ```
     {
-    text: You cannot get/deactivate team if the user not a member of any team
+    text: You cannot get/deactivate team if the user not a member of any team!
     }
     ```
        
@@ -203,13 +203,13 @@ starts with '@' symbol;
 * SLB-F3-RSP-DEL-OK
    ```
     {
-    text:Thanks, Team for '@slack_name' is '@slack_name1 @slack_name2 @slack_name3 @slack_name4'"
+    text:Thanks, Team for '@slack_name' is '@slack_name1 @slack_name2 @slack_name3 @slack_name4'!
     }
    ```
 * SLB-F3-RSP-EMPTY
     ```
     {
-    text: You cannot get/deactivate team if the user not a member of any team
+    text: You cannot get/deactivate team if the user not a member of any team!
     }
     ```
 * SLB-F3-RSP-ERR
@@ -260,14 +260,14 @@ starts with '@' symbol;
 * SLB-F4-RSP-DEL-OK
    ```
     {
-    text:Thanks, Team for '@slack_name' is '@slack_name1 @slack_name2 @slack_name3 @slack_name4'"
+    text:Thanks, Team for '@slack_name' is '@slack_name1 @slack_name2 @slack_name3 @slack_name4'!
     }
    ```
 
  * SLB-F4-RSP-EMPTY
      ```
      {
-    text: You cannot get/deactivate team if the user not a member of any team
+    text: You cannot get/deactivate team if the user not a member of any team!
      }
      ```
      
