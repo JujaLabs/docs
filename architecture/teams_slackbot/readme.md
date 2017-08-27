@@ -1,5 +1,5 @@
 # Teams Slackbot
-Teams slack bot performs processing of commands from slack chat. If validate commands, token, generates requests to 
+Teams slack bot performs processing of commands from slack chat. If commands and token are valid Slack bot generates requests to 
 Teams microservice [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams).
 It generates response to slack in case of successful command execution or error.
 
@@ -7,7 +7,7 @@ It generates response to slack in case of successful command execution or error.
 For the [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams) purposes we use slack chat ability. 
 It calls "slash command". This commands starts with "/" symbol ( "/away" for example). 
 Command must be one not empty word. It can have parameters ("/command param1 param2" for example). 
-Slack lets developers to create commands, which refer to any endpoint of developers microservice. Slach 
+Slack lets developers to create commands, which refer to any endpoint of microservices. Slach 
 commands support only POST method.
 
 ## Slack chat request example
@@ -30,9 +30,9 @@ response_url=https://hooks.slack.com/commands/1234/5678
 All requests from slack are validated by unique token.
 
 ## Rules of response to slack chat.
-User must send response to slack in case of successful command execution or error.
+User must receive the response from slackbot in case of successful command execution or error.
 Slack chat has 3000 ms time out for response. That's why Slackbot sends two responces to Slack: Instant and Delayed.
-All responses must contain HTTP 200 "OK" status code. All additional information must be text line.
+All responses must contain HTTP 200 "OK" status code. All additional information must be in text line.
 
 Read more  about [slash commands](https://api.slack.com/slash-commands)
 
@@ -44,7 +44,7 @@ Read more  about [slash commands](https://api.slack.com/slash-commands)
 * JBot Framework
 
 ## Abilities:
-***SLB-F1 I like a keeper want to activate new Teams, consists of four users.***
+***SLB-F1 As a keeper I want to activate new Teams, consist of four users.***
 
 Slackbot tasks:
 * SLB-F1-D1 Validate token;
@@ -99,7 +99,7 @@ starts with '@' symbol;
     }
    ```
     
-**SLB-F2  I like a keeper want to deactivate Teams.**   
+**SLB-F2 As a keeper I want to deactivate Teams.**   
  
 Slackbot tasks:
 * SLB-F2-D1 Validate token;
@@ -150,7 +150,7 @@ starts with '@' symbol;
 * SLB-F2-RSP-EMPTY
     ```
     {
-    text: You cannot get/deactivate team if user not in team
+    text: You cannot get/deactivate team if the user not a member of any team
     }
     ```
        
@@ -161,7 +161,7 @@ starts with '@' symbol;
     }
     ```
     
-**SLB-F3 I like a user want to get members of active Team of certain user.**
+**SLB-F3 As a user I want to get members of active Team of certain user.**
 
 Slackbot tasks:
 * SLB-F3-D1 Validate token;
@@ -209,7 +209,7 @@ starts with '@' symbol;
 * SLB-F3-RSP-EMPTY
     ```
     {
-    text: You cannot get/deactivate team if user not in team
+    text: You cannot get/deactivate team if the user not a member of any team
     }
     ```
 * SLB-F3-RSP-ERR
@@ -219,7 +219,7 @@ starts with '@' symbol;
     }
     ```
 
- **SLB-F4 I like a user want to get members of my active Team.**
+ **SLB-F4 As a user I want to get members of my active Team.**
  
  Slackbot tasks:
  * SLB-F4-D1 Validate token;
@@ -267,7 +267,7 @@ starts with '@' symbol;
  * SLB-F4-RSP-EMPTY
      ```
      {
-    text: You cannot get/deactivate team if user not in team
+    text: You cannot get/deactivate team if the user not a member of any team
      }
      ```
      

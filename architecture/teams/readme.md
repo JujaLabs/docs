@@ -20,16 +20,16 @@ end of the course.
 
 **TMF-D3** Participants are selected manually.
 
-**TMF-D4** In the absence of activity Team must be deactivated. Max team lifytime is one month.
+**TMF-D4** If the activity is absent Team must be deactivated. Max team lifetime is one month.
 
-**TMF-D5** Successfull operation on Team in void methods sends HTTP response 200 OK.  
+**TMF-D5** Successfull operation on Team in void methods sends the response with HTTP status 200 OK.  
 
 ### TMF-F1
-***TMF-F1 I like a keeper want to activate new Teams, consists of four users.***
+***TMF-F1 As a keeper I want to activate new Teams that consist of four users***
 
 * TMF-F1-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
 * TMF-F1-D2 Keeper points four users for future Team.
-* TMF-F1-D3 Necessary to check may be users in other team yet.
+* TMF-F1-D3 It's necessary to check if the users are already in another team.
 * TMF-F1-D4 Number of the Team is incremental number from Database.
 * TMF-F1-D5 Result of the command is the Team entity
 
@@ -59,11 +59,11 @@ end of the course.
    }  
 ```
 ### TMF-F2
-***TMF-F2 I like a keeper want to deactivate Teams.***
+***TMF-F2 As a keeper I want to deactivate Teams.***
 
 * TMF-F2-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
 * TMF-F2-D2 To deactivate Team - the keeper points uuid of any member of Team, he wants to deactivate.
-* TMF-F2-D3 Result of the command is the Team entity
+* TMF-F2-D3 Result of the command is the Team entity with updated deactivate date.
 
 * TMF-F2-URL
 ```
@@ -86,7 +86,7 @@ end of the course.
    }  
 ```
 ### TMF-F3
-***TMF-F3 I like a user want to get all active Teams.***
+***TMF-F3 As a user I want to get all active Teams.***
 
 * TMF-F3-D1 The operation is available for any user.
 * TMF-F3-D2 Result of the command is list of active Teams entities.
@@ -117,7 +117,7 @@ end of the course.
     ]
 ```
 ### TMF-F4
-***TMF-F4 I like a user want to get active Team of certain user.***
+***TMF-F4 As a user I want to get active Team of certain user.***
 
 * TMF-F4-D1 The operation is available for any user.
 * TMF-F4-D2 Result of the command is the Team entity.  
