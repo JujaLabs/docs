@@ -105,7 +105,6 @@ end of the course.
     [
         {
             "id": .... ,
-            "from": .... ,
             "members":[.... , .... , .... , ....],
             "activateDate": .... ,
             "deactivateDate": ....
