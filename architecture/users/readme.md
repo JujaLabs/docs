@@ -39,7 +39,7 @@
 * USR-F1-URL
 
     ```
-    url - "/users"
+    url - "/v1/users"
     method - GET
     ```
 
@@ -59,21 +59,21 @@
     ]    
     ```
 
-### USR-F2 Я как пользователь хочу иметь возможность получить имена пользователей по их uuid
+### USR-F2 Я как пользователь хочу иметь возможность получить пользователей по их uuid
 
-* USR-F2-D1 На входе - массив uuid, на выходе - массив uuid + name.
+* USR-F2-D1 На входе - массив uuid, на выходе - массив users с полями uuid, slack, skype и name.
 
 * USR-F2-URL
 
     ```
-    url - "/users/nameByUuid"
+    url - "/v1/users/usersByUuids"
     method - POST
     ```
 
 * USR-F2-REQ
 
     ```
-    {"uuid":["...","...", ...]}"
+    {"uuids":["...","...", ...]}"
     ```
 
 * USR-F2-RSP
@@ -82,20 +82,22 @@
     [
         {
             "uuid" : "...",
+            "slack" : "...",
+            "skype" : "...",
             "name" : "..."
         },
         ...
     ]
     ```
 
-### USR-F3 Я как пользователь хочу иметь возможность получить uuid пользователей по их slack name.
+### USR-F3 Я как пользователь хочу иметь возможность получить пользователей по их slack name.
 
-* USR-F3-D1 Входные данные - массив slackNames, результат - массив uuid + slack.
+* USR-F3-D1 Входные данные - массив slackNames, результат - массив users с полями uuid, slack, skype и name.
 
 * USR-F3-URL
 
     ```
-    url - "/users"/uuidBySlack""
+    url - "/v1/users"/usersBySlackNames""
 
     method - POST
     ```
@@ -112,37 +114,10 @@
     [
         {
             "uuid" : "...",
-            "slack" : "..."
+            "slack" : "...",
+            "skype" : "...",
+            "name" : "..."
         },
         ...
     ]
     ```
-
-### USR-F4 (Перейдет в keeper service !!!) Я как пользователь хочу иметь возможность получить информацию по активным киперам
-
-* USR-F4-D1 В результате получаем массив, состоящий из uuid и description кипера, 
-а также uuid пользователя, который назначил кипера 
-
-* USR-F4-URL
-
-    ```
-    url - "/users/activeKeepers"
-    method - GET
-    ```
-
-* USR-F4-REQ
-
-* USR-F4-RSP
-
-    ```
-    [
-        {
-            "uuid" : "...",
-            "description" : "...",
-            "from" : "..."
-        },
-        ...
-    [
-    ```
-
-**[ссылка на старый документ до переноса](https://docs.google.com/document/d/1jfcEau0nIv3gAy8kBsyyAa37PzYUlL2RfjFocVYx5BQ/edit)**

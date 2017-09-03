@@ -1,7 +1,8 @@
 # Teams
-JuJa связка состоит из 4х участников , не важно с каким опытом ребята. Цель - взаимная поддержка и контроль участников связки для окончания тренига.
+JuJa Team consists of four users with various expirience in Java. Goal is in mutual support in study process to the 
+end of the course. 
 
-## Технические характеристики проекта:
+## Technical characteristics of the project:
 
 * JDK8
 * Mongo
@@ -12,24 +13,25 @@ JuJa связка состоит из 4х участников , не важно
 * FakeMongo 
 * LordOfTheJars
 
-## Общие положения:
-**TMF-D1** Хранитель - особенный тип пользователей, которые занимаются активной поддержкой и развитием определенных направлений на курсе.
+## Common:
+**TMF-D1** Keeper - special type of user, which helps to develop course and help other users.
 
-**TMF-D2** Связка состоит из 4х человек. Один человек может состоять только в одной связке.
+**TMF-D2** The Team consists of four users. Every user can be only in one Team.
 
-**TMF-D3** Участники выбираются вручную.
+**TMF-D3** Participants are selected manually.
 
-**TMF-D4** В случае отсутствия активности связка расформировывается. Максимальный срок жизни связки - 1 мес.
+**TMF-D4** If the activity is absent Team must be deactivated. Max team lifetime is one month.
 
-**TMF-D5** В случае успешно выполненной операции для void методов юзер получает ответ 200 OK. “void метод” - это endpoint который не подразумевает возврата результата. Смотри детальнее [тут](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#200)
+**TMF-D5** Successfull operation on Team in void methods sends the response with HTTP status 200 OK.  
 
 ### TMF-F1
-***TMF-F1 Я как хранитель хочу иметь возможность создавать связки. Связка это команда состоящая из четырех человек.***
+***TMF-F1 As a keeper I want to activate new Teams that consist of four users***
 
-* TMF-F1-D1 Операцию могут выполнять не все пользователи. Только хранители TMF-D1.
-* TMF-F1-D2 Хранитель в комманде указывает четырех пользователей, будущих участников связки.
-* TMF-F1-D3 Необходимо проверять чтобы пользователь не состоял уже в другой связке.
-* TMF-F1-D4 Номер для связки определяется инкрементом для наибольшего существующего номера связки в БД.
+* TMF-F1-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
+* TMF-F1-D2 Keeper points four users for future Team.
+* TMF-F1-D3 It's necessary to check if the users are already in another team.
+* TMF-F1-D4 Number of the Team is incremental number from Database.
+* TMF-F1-D5 Result of the command is the Team entity
 
 * TMF-F1-URL
 ```
@@ -38,21 +40,30 @@ JuJa связка состоит из 4х участников , не важно
 ```
 * TMF-F1-REQ
 ```
-    {
-        "from" : "...",
-        "user1" : "...",
-        "user2" : "...",
-        "user3" : "...",
-        "user4" : "..."
-    }
+{
+  "members": [
+    "uuid1",
+    "uuid2",
+    "uuid3",
+    "uuid4"
+  ]
+}
 ```
-* TMF-F1-RSP["..."] - один элемент в массиве(id - номер сформированой комманды)
-
+* TMF-F1-RSP - Activated Team entity
+```
+   {
+     "id": .... ,
+     "members":[.... , .... , .... , ....],
+     "activateDate": .... ,
+     "deactivateDate": ....
+   }  
+```
 ### TMF-F2
-***TMF-F2 Я как хранитель хочу иметь возможность расформировывать связки.***
+***TMF-F2 As a keeper I want to deactivate Teams.***
 
-* TMF-F2-D1 Операцию могут выполнять не все пользователи. Только хранители TMF-D1.
-* TMF-F2-D2 Хранитель указывает uuid одного из участников связки, которую необходимо расформировать.
+* TMF-F2-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
+* TMF-F2-D2 To deactivate Team - the keeper points uuid of any member of Team, he wants to deactivate.
+* TMF-F2-D3 Result of the command is the Team entity with updated deactivate date.
 
 * TMF-F2-URL
 ```
@@ -65,13 +76,20 @@ JuJa связка состоит из 4х участников , не важно
         "from" : "..."
     }
 ```
-* TMF-F2-RSP["..."] - один элемент в массиве(id - номер расформированой комманды)
-
+* TMF-F2-RSP - Deactivated Team entity
+```
+   {
+     "id": .... ,
+     "members":[.... , .... , .... , ....],
+     "activateDate": .... ,
+     "deactivateDate": ....
+   }  
+```
 ### TMF-F3
-***TMF-F3 Я как пользователь хочу иметь возможность получить список всех активных связок.***
+***TMF-F3 As a user I want to get all active Teams.***
 
-* TMF-F3-D1 Операцию может выполнить любой пользователь.
-* TMF-F3-D2 Результатом выполнения этой комманды должен быть список, содержащий в себе все активные связки.
+* TMF-F3-D1 The operation is available for any user.
+* TMF-F3-D2 Result of the command is list of active Teams entities.
 
 * TMF-F3-URL
 ```
@@ -87,7 +105,6 @@ JuJa связка состоит из 4х участников , не важно
     [
         {
             "id": .... ,
-            "from": .... ,
             "members":[.... , .... , .... , ....],
             "activateDate": .... ,
             "deactivateDate": ....
@@ -99,13 +116,11 @@ JuJa связка состоит из 4х участников , не важно
     ]
 ```
 ### TMF-F4
-***TMF-F4 Я как пользователь хочу иметь возможность получить список всех участников определенной связки.***
+***TMF-F4 As a user I want to get active Team of certain user.***
 
-* TMF-F4-D1 Операцию может выполнить любой пользователь.
-* TMF-F4-D2 Результатом выполнения этой команды должен быть список, содержащий в себе uuid всех участников выбранной связки 
- или текст ошибки.  
-* TMF-F4-D3 Пользователь указывает uuid одного из участников связки, которую необходимо получить.
-
+* TMF-F4-D1 The operation is available for any user.
+* TMF-F4-D2 Result of the command is the Team entity.  
+* TMF-F4-D3 The user points uuid of any member of Team, he wants to get.
 
 * TMF-F4-URL
 ```
@@ -118,13 +133,11 @@ JuJa связка состоит из 4х участников , не важно
 ```
 * TMF-F4-RSP
 ```
-    [
-        {
-            "id": .... ,
-            "from": .... ,
-            "members":[.... , .... , .... , ....],
-            "activateDate": .... ,
-            "deactivateDate": ....
-        }
-    ]    
+   {
+     "id": .... ,
+     "members":[.... , .... , .... , ....],
+     "activateDate": .... ,
+     "deactivateDate": ....
+   }  
+   
  ```

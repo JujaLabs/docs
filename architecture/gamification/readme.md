@@ -49,7 +49,7 @@
 * GMF-F1-URL
 
     ```
-    url - "/user/pointSum"
+    url - "/v1/gamification/user/pointSum"
     method - GET
     ```
 
@@ -75,7 +75,7 @@
 * GMF-F2-URL
 
     ```
-    url - "/user/achieveDetails"
+    url - "/v1/gamification/user/achieveDetails"
     method - POST
     ```
 
@@ -115,7 +115,7 @@
 * GMF-F3-URL
 
     ```
-    url - "/achieve/daily"
+    url - "/v1/gamification/achieve/daily"
     method - POST
     ```
 
@@ -148,7 +148,7 @@
 * GMF-F4-URL
 
     ```
-    url - "/achieve/thanks"
+    url - "/v1/gamification/achieve/thanks"
     method - POST
     ```
 
@@ -190,7 +190,7 @@
 * GMF-F5-D5 За день возможен только 1 турнир, в случае если была попытка выполнить запрос дважды в день, возникает ошибка формате GMF-D6-2 с текстом “За сегодняшний турнир уже были выставлены ачивки”.
 * GMF-F5-URL
     ```
-    url - "/achieve/codenjoy"
+    url - "/v1/gamification/achieve/codenjoy"
     method - POST
     ```
 * GMF-F5-REQ
@@ -222,7 +222,7 @@
 * GMF-F6-D5 За неделю возможна только одна транзакция, в случае если была попытка выполнить запрос дважды в неделю, возникает ошибка формате GMF-D6-2 с текстом “На этой неделе уже благодарили Хранителей”.
 * GMF-F6-URL
     ```
-    url - "/achieve/keepers/thanks"
+    url - "/v1/gamification/achieve/keepers/thanks"
     method - POST
     ```
 * GMF-F6-REQ
@@ -251,7 +251,7 @@
 
 * GMF-F7-URL
     ```
-    url - "/achieve/team"
+    url - "/v1/gamification/achieve/team"
     method - POST
     ```
 * GMF-F7-REQ
@@ -278,7 +278,7 @@
 
 * GMF-F8-URL
 ```
-    url - "/achieve/welcome"
+    url - "/v1/gamification/achieve/welcome"
     method - POST
 ```
 * GMF-F8-REQ
@@ -303,7 +303,7 @@
 
 * GMF-F9-URL
     ```
-    url - "/achieve/interview"
+    url - "/v1/gamification/achieve/interview"
     method - POST
     ```
 
