@@ -1,5 +1,5 @@
 # Teams
-JuJa Team consists of four users with various expirience in Java. Goal is in mutual support in study process to the 
+JuJa Team consists of four users with various experience in Java. Goal is in mutual support in study process to the
 end of the course. 
 
 ## Technical characteristics of the project:
@@ -27,7 +27,7 @@ end of the course.
 ### TMF-F1
 ***TMF-F1 As a keeper I want to activate new Teams that consist of four users***
 
-* TMF-F1-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
+* TMF-F1-D1 The operation is available only for Keeper of Teams Direction (TMF-D1).
 * TMF-F1-D2 Keeper points four users for future Team.
 * TMF-F1-D3 It's necessary to check if the users are already in another team.
 * TMF-F1-D4 Number of the Team is incremental number from Database.
@@ -61,7 +61,7 @@ end of the course.
 ### TMF-F2
 ***TMF-F2 As a keeper I want to deactivate Teams.***
 
-* TMF-F2-D1 The operation is available only for Keeper of Teams Diretion (TMF-D1).
+* TMF-F2-D1 The operation is available only for Keeper of Teams Direction (TMF-D1).
 * TMF-F2-D2 To deactivate Team - the keeper points uuid of any member of Team, he wants to deactivate.
 * TMF-F2-D3 Result of the command is the Team entity with updated deactivate date.
 

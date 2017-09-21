@@ -3,11 +3,11 @@ Teams slack bot performs processing of commands from slack chat. If commands and
 Teams microservice [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams).
 It generates response to slack in case of successful command execution or error.
 
-## Desciption of slack slash command
+## Description of slack slash command
 For the [Teams](https://github.com/JujaLabs/docs/tree/master/architecture/teams) purposes we use slack chat ability. 
 It calls "slash command". This commands starts with "/" symbol ( "/away" for example). 
 Command must be one not empty word. It can have parameters ("/command param1 param2" for example). 
-Slack lets developers to create commands, which refer to any endpoint of microservices. Slach 
+Slack lets developers to create commands, which refer to any endpoint of microservices. Slash
 commands support only POST method.
 
 ## Slack chat request example
@@ -31,7 +31,7 @@ All requests from slack are validated by unique token.
 
 ## Rules of response to slack chat.
 User must receive the response from slackbot in case of successful command execution or error.
-Slack chat has 3000 ms time out for response. That's why Slackbot sends two responces to Slack: Instant and Delayed.
+Slack chat has 3000 ms time out for response. That's why Slackbot sends two responses to Slack: Instant and Delayed.
 All responses must contain HTTP 200 "OK" status code. All additional information must be in text line.
 
 Read more  about [slash commands](https://api.slack.com/slash-commands)
