@@ -1,40 +1,34 @@
 # User service
 
-Микросервис предоставляет пользователям (другим микросервисам) данные о пользователях курса (студентах). 
+The service provides the data about course students to users (other services).
 
-Данные о пользователях хранятся в CRM, работа с которой осуществляется через API (т.о. на данный момент слой данных - это CRM). Микросервис предоставляет пользователям ограниченный RESTful API (без возможности удаления записей).
+Student's data is stored in the PostgreSQL database. The records in the database are synchronized with the source CRM on schedule once per day.
+The service provides users a limited RESTful API with ability to read records only but not to add, update and delete them.
 
-
-## Технические характеристики:
+## Technical characteristics of the project:
 
 * JDK 8
 * Spring Boot
+* Spring Data JPA
 * JUnit
+* Spring Test DBUnit
 * Gradle
-* логгирование
+* Logging
 
 
-## Общие положения
+## Generals:
 
-* USR-D1 На URI сервиса приходит входящий запрос, его параметры проверяются на корректность и отсутствие любых лишних данных (SQL-injection и т.п.), и выполняется запрос к слою данных (к CRM через API)
+* USR-D1 The service receives an incoming request on its URI. Request's parameters are checked for correctness and absence of any unnecessary data (SQL injection, etc.) and a query is performed to the data layer (database)
 
-* USR-D2 Сервис не хранит у себя данные. Все операции логгируются в соответствии с установленным уровнем логгирования.
+* USR-D2 The service stores limited information about students that is necessary for the functioning of other services. All operations are logged according to the established level of logging.
 
-* USR-D3 Данные для доступа к API CRM хранятся в отдельном файле в виде (а лучше предложить какой-то другой метод хранения):
-    ```
-    x2crm_root=<string>
-    x2crm_user=<string>
-    x2crm_pass=<string>
-    ```
-* USR-D4 Информация по API X2CRM можно найти [тут](http://wiki.x2crm.com/wiki/REST_API_Reference)
+* USR-D3 When an error occurs during user's request user should receive sufficient for understanding and correcting information about this error such as: incorrectly set of parameters, absence of mandatory parameters, format parameter mismatch, lack of data etc.
 
-* USR-D5 Пользователю должна предоставляться информация об ошибках при выполнении его запроса (достаточная для понимания и исправления им ошибки) - некорректно заданные параметры, отсутствие обязательного параметра, несоответствие формата параметра, отсутствии данных по его запросу и т.д.
+## Features:
 
-## Список фичей
+### USR-F1 As a user I want to get a list of all students.
 
-### USR-F1 Я как пользователь хочу иметь возможность получить список всех пользователей
-
-* USR-F1-D1 Информация о пользователе состоит из uuid, slack, skype и name
+* USR-F1-D1 Student information consists of uuid, slack, skype and name
 
 * USR-F1-URL
 
@@ -56,12 +50,12 @@
             "name" : "..."
         },
         ...
-    ]    
+    ]
     ```
 
-### USR-F2 Я как пользователь хочу иметь возможность получить пользователей по их uuid
+### USR-F2  As a user I want to get list of students by their uuid
 
-* USR-F2-D1 На входе - массив uuid, на выходе - массив users с полями uuid, slack, skype и name.
+* USR-F2-D1 Input - an uuid array, output - an array of students with the uuid, slack, skype and name fields.
 
 * USR-F2-URL
 
@@ -90,9 +84,9 @@
     ]
     ```
 
-### USR-F3 Я как пользователь хочу иметь возможность получить пользователей по их slack name.
+### USR-F3 As a user I want to get list of students by their slack name.
 
-* USR-F3-D1 Входные данные - массив slackNames, результат - массив users с полями uuid, slack, skype и name.
+* USR-F3-D1 Input - a slackNames array, output - an array of students with the uuid, slack, skype and name fields.
 
 * USR-F3-URL
 
