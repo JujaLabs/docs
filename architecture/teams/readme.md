@@ -41,6 +41,7 @@ end of the course.
 * TMF-F1-REQ
 ```
 {
+  "from": "uuid-from",
   "members": [
     "uuid1",
     "uuid2",
@@ -53,6 +54,7 @@ end of the course.
 ```
    {
      "id": .... ,
+     "from":....,
      "members":[.... , .... , .... , ....],
      "activateDate": .... ,
      "deactivateDate": ....
@@ -67,19 +69,21 @@ end of the course.
 
 * TMF-F2-URL
 ```
-    url - "/teams/users/{uuid}"
+    url - "/teams"
     method - PUT
 ```
 * TMF-F2-REQ
 ```
     {
-        "from" : "..."
+        "from" : "uuid-from",
+        "uuid" : "uuid1"
     }
 ```
 * TMF-F2-RSP - Deactivated Team entity
 ```
    {
      "id": .... ,
+     "from":....,
      "members":[.... , .... , .... , ....],
      "activateDate": .... ,
      "deactivateDate": ....
@@ -105,6 +109,7 @@ end of the course.
     [
         {
             "id": .... ,
+            "from":....,            
             "members":[.... , .... , .... , ....],
             "activateDate": .... ,
             "deactivateDate": ....
@@ -135,6 +140,7 @@ end of the course.
 ```
    {
      "id": .... ,
+     "from":....,     
      "members":[.... , .... , .... , ....],
      "activateDate": .... ,
      "deactivateDate": ....
