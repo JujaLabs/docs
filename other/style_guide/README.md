@@ -183,7 +183,7 @@ programs are <strong>broken</strong> and they must be <strong>fixed</strong>.</p
 <h4 id="s3.3.2-import-line-wrapping">3.3.2 No line-wrapping</h4>
 
 <p>Import statements are <strong>not line-wrapped</strong>. The column limit (Section 4.4,
-<a href="#s4.4-column-limit">Column limit: 100</a>) does not apply to import
+<a href="#s4.4-column-limit">Column limit: 120</a>) does not apply to import
 statements.</p>
 
 <h4 id="s3.3.3-import-ordering-and-spacing">3.3.3 Ordering and spacing</h4>
@@ -317,14 +317,14 @@ after it is opened, with no characters or line break in between
 
 <p>Examples:</p>
 
-<pre class="prettyprint lang-java">  // This is acceptable
+<pre class="prettyprint lang-java">    // This is acceptable
     void doNothing() {}
 
     // This is equally acceptable
     void doNothingElse() {
     }
 </pre>
-<pre class="prettyprint lang-java badcode">  // This is not acceptable: No concise empty blocks in a multi-block statement
+<pre class="prettyprint lang-java badcode">    // This is not acceptable: No concise empty blocks in a multi-block statement
     try {
         doSomething();
     } catch (Exception e) {}
@@ -838,6 +838,8 @@ underscores). For example, <code>com.example.deepspace</code>, not
 noun phrases (for example, <code class="prettyprint lang-java">List</code>), but may sometimes be
 adjectives or adjective phrases instead (for example,
 <code class="prettyprint lang-java">Readable</code>).</p>
+
+<p>Classes realizing Dependency Inversion pattern should start with the name of their implemented interface ending with "Impl" suffix (e.g. <code class="prettyprint lang-java">KeeperService</code> → <code class="prettyprint lang-java">KeeperServiceImpl</code>).</p>
 
 <p>There are no specific rules or even well-established conventions for naming annotation types.</p>
 
