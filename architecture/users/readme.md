@@ -28,7 +28,7 @@ The service provides users a limited RESTful API with ability to read records on
 
 ### USR-F1 As a user I want to get a list of all students.
 
-* USR-F1-D1 Student information consists of uuid, slack, skype and name
+* USR-F1-D1 Student information consists of uuid, slack, slackId, skype and name
 
 * USR-F1-URL
 
@@ -46,6 +46,7 @@ The service provides users a limited RESTful API with ability to read records on
         {
             "uuid" : "...",
             "slack" : "...",
+            "slackId" : "...",
             "skype" : "...",
             "name" : "..."
         },
@@ -55,7 +56,7 @@ The service provides users a limited RESTful API with ability to read records on
 
 ### USR-F2  As a user I want to get list of students by their uuid
 
-* USR-F2-D1 Input - an uuid array, output - an array of students with the uuid, slack, skype and name fields.
+* USR-F2-D1 Input - an uuid array, output - an array of students with the uuid, slack, slackId, skype and name fields.
 
 * USR-F2-URL
 
@@ -77,6 +78,7 @@ The service provides users a limited RESTful API with ability to read records on
         {
             "uuid" : "...",
             "slack" : "...",
+            "slackId" : "...",
             "skype" : "...",
             "name" : "..."
         },
@@ -86,7 +88,7 @@ The service provides users a limited RESTful API with ability to read records on
 
 ### USR-F3 As a user I want to get list of students by their slack name.
 
-* USR-F3-D1 Input - a slackNames array, output - an array of students with the uuid, slack, skype and name fields.
+* USR-F3-D1 Input - a slackNames array, output - an array of students with the uuid, slack, slackId, skype and name fields.
 
 * USR-F3-URL
 
@@ -109,9 +111,43 @@ The service provides users a limited RESTful API with ability to read records on
         {
             "uuid" : "...",
             "slack" : "...",
+            "slackId" : "...",
             "skype" : "...",
             "name" : "..."
         },
         ...
     ]
     ```
+    
+### USR-F4 As a user I want to get list of students by their slack id.
+    
+* USR-F4-D1 Input - a slackIds array, output - an array of students with the uuid, slack, slackId, skype and name fields.
+    
+* USR-F4-URL
+  
+     ```
+     url - "/v1/users"/usersBySlackIds""
+    
+     method - POST
+     ```
+    
+* USR-F4-REQ
+    
+     ```
+     {"slackIds":["...","...", ...]}"
+     ```
+    
+* USR-F4-RSP
+    
+     ```
+     [
+         {
+            "uuid" : "...",
+            "slack" : "...",
+            "slackId" : "...",
+            "skype" : "...",
+            "name" : "..."
+         },
+         ...
+     ]
+     ```
