@@ -85,45 +85,12 @@ The service provides users a limited RESTful API with ability to read records on
         ...
     ]
     ```
-
-### USR-F3 As a user I want to get list of students by their slack name.
-
-* USR-F3-D1 Input - a slackNames array, output - an array of students with the uuid, slack, slackId, skype and name fields.
-
+    
+### USR-F3 As a user I want to get list of students by their slack id.
+    
+* USR-F3-D1 Input - a slackIds array, output - an array of students with the uuid, slack, slackId, skype and name fields.
+    
 * USR-F3-URL
-
-    ```
-    url - "/v1/users"/usersBySlackNames""
-
-    method - POST
-    ```
-
-* USR-F3-REQ
-
-    ```
-    {"slackNames":["...","...", ...]}"
-    ```
-
-* USR-F3-RSP
-
-    ```
-    [
-        {
-            "uuid" : "...",
-            "slack" : "...",
-            "slackId" : "...",
-            "skype" : "...",
-            "name" : "..."
-        },
-        ...
-    ]
-    ```
-    
-### USR-F4 As a user I want to get list of students by their slack id.
-    
-* USR-F4-D1 Input - a slackIds array, output - an array of students with the uuid, slack, slackId, skype and name fields.
-    
-* USR-F4-URL
   
      ```
      url - "/v1/users"/usersBySlackIds""
@@ -131,13 +98,13 @@ The service provides users a limited RESTful API with ability to read records on
      method - POST
      ```
     
-* USR-F4-REQ
+* USR-F3-REQ
     
      ```
      {"slackIds":["...","...", ...]}"
      ```
     
-* USR-F4-RSP
+* USR-F3-RSP
     
      ```
      [
