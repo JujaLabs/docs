@@ -8,6 +8,7 @@
 * [[MFU] Notes of meetings](https://github.com/JujaLabs/docs/wiki/%5BMFU%5D-Notes-of-meetings)</br>
 * [Style Guide](https://github.com/JujaLabs/docs/tree/master/other/style_guide)</br>
 * [IntelliJ IDEA Recommended Settings](https://github.com/JujaLabs/docs/tree/master/other/idea_tips)</br>
+* [Test practices](https://github.com/JujaLabs/docs/wiki/Test-practices)
 </br>
 
 ![JuJa Platform architecture image](https://github.com/JujaLabs/docs/blob/master/architecture/juja_platform.png "JuJa Platform")
