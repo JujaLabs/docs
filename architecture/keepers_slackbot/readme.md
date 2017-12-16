@@ -100,11 +100,11 @@ response_url=https://hooks.slack.com/commands/1234/5678
     
 * SLB-F2-CMD 
 ```
-    /keeper-dismiss @slack_nick_name direction
+    /keeper-deactivate @slack_nick_name direction
 ```
 * SLB-F2-URL
 ```
-    url - commands/keeper/dismiss
+    url - commands/keeper/deactivate
     method - POST
 ```
 * SLB-F2-REQ
@@ -209,7 +209,7 @@ response_url=https://hooks.slack.com/commands/1234/5678
 ```
 * SLB-F4-URL
 ```
-    url - commands/myDirections
+    url - commands/keeeper/myDirections
     method - POST
 ```
 * SLB-F4-REQ
